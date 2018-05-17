@@ -1,11 +1,15 @@
-<div class="container">
-  <h1><%= @cocktail.name %></h1>
-  <% @doses.each do |dose| %>
-    <p><%= dose.description %> <%= dose.ingredient.name %></p>
-    <%= button_to "delete", dose_path(:id => dose.id),
-                           :controller => :doses,
-                           :action => 'destroy',
-                           :method => :delete %>
-  <% end %>
+<div class="page" style="background-image: url('https://images.pexels.com/photos/8395/lights-night-unsharp-blured.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260+'); height: 100vh; background-position: center; background-size: cover">
+  <div class="container">
+    <h1><%= @cocktail.name %></h1>
+    <% @doses.each do |dose| %>
+      <p><%= dose.description %> <%= dose.ingredient.name %></p>
+      <%= button_to "delete", dose_path(:id => dose.id),
+                             :controller => :doses,
+                             :action => 'destroy',
+                             :method => :delete %>
+    <% end %>
+    <br>
+    <p><%= link_to 'add an Ingredient', new_cocktail_dose_path(@cocktail) %></p>
+    <p><%= link_to 'back to all Cocktails', cocktails_path %></p>
+  </div>
 </div>
-

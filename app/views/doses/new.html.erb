@@ -1,6 +1,12 @@
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-<%= f.label :description %>
-<%= f.text_field :description %>
-<%= f.association :ingredient %>
-<%= f.submit 'Add a dose', class: "btn btn-primary" %>
-<% end %>
+<div class="page" style="background-image: url('https://images.pexels.com/photos/8395/lights-night-unsharp-blured.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260+'); background-position: center; background-size: cover; height: 100vh">
+  <div class="container" style="padding-top: 50px">
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit 'Add a dose', class: "btn btn-primary" %>
+    <% end %>
+    <br>
+    <%= link_to 'Back to Cocktail', @cocktail %>
+  </div>
+</div>

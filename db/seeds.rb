@@ -9,6 +9,10 @@
 
 # SH: Seed cocktails
 
+puts "> "
+puts "> "
+puts "> ### SEEDING INGREDIENTS ###"
+
 require 'json'
 require 'open-uri'
 
@@ -21,10 +25,28 @@ data['drinks'].each do |drink|
   Ingredient.create(name: drink['strIngredient1'])
 end
 
+puts "> ### DONE (1/3) ###"
+
 # SH: Seed cocktails
 
+puts "> "
+puts "> "
+puts "> ### SEEDING COCKTAILS ###"
 
+10.times do
+  cocktail = Cocktail.new(
+    name: Faker::Science.element,
+    )
+  puts cocktail.name
+  cocktail.save!
+end
+
+puts "> ### DONE (2/3) ###"
 
 # SH: Seed doses
 
+puts "> "
+puts "> "
+puts "> ### SEEDING DOSES ###"
 
+puts "> ### DONE (3/3) ###"

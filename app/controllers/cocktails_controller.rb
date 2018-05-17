@@ -1,11 +1,16 @@
 class CocktailsController < ApplicationController
   before_action :cocktail_find, only: [ :show ]
 
+  def main
+    redirect_to cocktails_path
+  end
+
   def index
     @cocktails = Cocktail.all
   end
 
   def show
+    @doses = Dose.where(cocktail_id: @cocktail.id)
   end
 
   def new

@@ -1,1 +1,11 @@
-<%= @cocktail.name %>
+<div class="container">
+  <h1><%= @cocktail.name %></h1>
+  <% @doses.each do |dose| %>
+    <p><%= dose.description %> <%= dose.ingredient.name %></p>
+    <%= button_to "delete", dose_path(:id => dose.id),
+                           :controller => :doses,
+                           :action => 'destroy',
+                           :method => :delete %>
+  <% end %>
+</div>
+

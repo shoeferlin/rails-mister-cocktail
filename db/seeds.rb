@@ -33,7 +33,7 @@ puts "> "
 puts "> "
 puts "> ### SEEDING COCKTAILS ###"
 
-10.times do
+20.times do
   cocktail = Cocktail.new(
     name: Faker::Science.element,
     )

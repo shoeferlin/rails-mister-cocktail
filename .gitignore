@@ -28,4 +28,5 @@
 /public/packs-test
 /node_modules
 yarn-debug.log*
+/config/application.yml
 .yarn-integrity

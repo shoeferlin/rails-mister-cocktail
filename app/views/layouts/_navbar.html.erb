@@ -1,14 +1,16 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
-    <img src="images/logo.png" alt="logo">
+  <a href="/" class="navbar-cocktail-brand">
+    <%= image_tag('cocktail-logo-v0.02.jpeg') %>
   </a>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <a href="" class="navbar-wagon-item navbar-wagon-link">All Cocktails</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Add Cocktail</a>
+<!--     <%= link_to 'All Cocktails', cocktails_path %> -->
+
+    <%= link_to 'All Cocktails', cocktails_path, :class => "navbar-wagon-item navbar-wagon-link"%>
+    <%= link_to 'Add Cocktail', new_cocktail_path, :class => "navbar-wagon-item navbar-wagon-link"%>
 
   </div>
 
@@ -17,8 +19,8 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">All Cocktails</a></li>
-        <li><a href="#">Add Cocktail</a></li>
+        <li><%= link_to 'All Cocktails', cocktails_path%></li>
+        <li><%= link_to 'Add Cocktail', new_cocktail_path%></li>
       </ul>
     </div>
   </div>

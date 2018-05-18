@@ -1,13 +1,6 @@
-<div class="banner" style="background-image: url('https://images.pexels.com/photos/613037/pexels-photo-613037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); height: 77vh; background-position: center; background-size: cover; text-align: center; padding-top: 200px">
-  <h1 style="font-size: 60pt; color: black; font-weight: bold">Mister Cocktail</h1>
-</div>
-<div class="page" style="background-image: url('https://images.pexels.com/photos/8395/lights-night-unsharp-blured.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260+'); background-position: center; background-size: cover; padding: 50px">
+<%= render 'banner' %>
+<div class="cocktail-page">
   <div class="container">
-    <h1>Cocktails</h1>
-    <h2>Because there is always a reason to drink a cocktail!</h2>
-    <br>
-    <%= link_to 'Add a new Cocktail', new_cocktail_path %>
-    <br>
     <br>
     <ul>
       <% @cocktails.each do |cocktail| %>
@@ -15,6 +8,5 @@
       <% end %>
     </ul>
     <br>
-    <%= cl_image_tag("lydwgpm4qv68cvkamtzi.jpg", width: 400, height: 300, crop: :fill) %>
   </div>
 </div>

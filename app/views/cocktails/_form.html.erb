@@ -1,11 +1,8 @@
-<div class="page" style="background-image: url('https://images.pexels.com/photos/8395/lights-night-unsharp-blured.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260+'); background-position: center; background-size: cover; height: 100vh">
-    <div class="container" style="padding-top: 50px">
-      <%= simple_form_for [@cocktail] do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-      <%= f.input :photo %>
-      <%= f.input :photo_cache, as: :hidden %>
-      <%= f.submit 'Add a cocktail', class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</div>
+<%= simple_form_for [@cocktail] do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.input :photo %>
+<%= f.input :photo_cache, as: :hidden %>
+<%= f.submit 'Add a cocktail', class: "btn btn-primary" %>
+<% end %>
+

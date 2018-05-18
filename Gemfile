@@ -47,6 +47,8 @@ gem 'jquery-rails' # Add this line if you use Rails 5.1
 
   # SH Adding gems for seed
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+  # SH Adding gem for security and cloudinary
+  gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
